@@ -1,0 +1,24 @@
+<h1>Contact ☎️</h1>
+
+<p>Just reach out when you see me somewhere</p>
+
+<h2>Who do you want to contact?</h2>
+<form action="/contact" method="get">
+  <label for="member">Please type a name...</label>
+  <input
+  name="member"
+  value="<%= params[:member]%>"
+  type="text"
+  id="member"
+  placeholder="charlie, frederick...">
+  <input type="submit">
+</form>
+
+<h2>Our Team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<p>Inserting a link to the home page with the link_to() method: <%= link_to("<-- go back to home", root_path) %> </p>

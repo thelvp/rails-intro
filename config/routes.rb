@@ -5,6 +5,15 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # 1. GET localhost3000 (homepage; make it the root of your app)
+  root to: "pages#home"
+
+  # 2. GET localhost3000/about (about page)
+  get "/about", to: "pages#about"
+  # root to: "pages#home"
+
+  # 3. GET localhost3000/contact (contact page)
+  get "/contact", to: "pages#contact"
+  # root to: "pages#home"
+
 end

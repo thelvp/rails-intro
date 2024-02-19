@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsIntro</title>
+    <title>My first Rails app </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <p>This text is on every page, since it is in application.html.erb ✨</p>
+    <p>---------------------------------</p>
+    <%# yield = placeholder where HTML of pages is inserted %>
     <%= yield %>
+    <p>---------------------------------</p>
+    <p>This is under the yield - greetings from appliation.html.erb again ✨</p>
   </body>
 </html>
